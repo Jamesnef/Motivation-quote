@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Online Journal</title>
+</head>
+<body>
+    <h1>Online Journal</h1>
+    
+    <form action="/add_entry" method="POST"> <!-- add entry -->
+        <textarea name="content" rows="4" cols="50"></textarea><br> <!--tạo box? để user enter entry?-->
+        <input type="submit" value="Save Entry"> <!-- tạo button để submit-->
+    </form>
+    
+    <h2>Entries:</h2>
+    <ul>
+        {% for entry in entries %}
+        <li>{{ entry[1] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
